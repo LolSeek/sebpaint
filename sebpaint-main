@@ -3,7 +3,8 @@ local WhitelistedTesters = {
     "brovisitedhisfriendz",
     "wompwompnodadnomom",
     "Indexell",
-    "viktorjo11110"
+    "viktorjo11110",
+    "xFaResKniGhTx"
 }
 
 if not table.find(WhitelistedTesters,game.Players.LocalPlayer.Name) then

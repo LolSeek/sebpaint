@@ -1,0 +1,19 @@
+local WhitelistedTesters = {
+    "GrinesMr",
+    "brovisitedhisfriendz",
+    "wompwompnodadnomom",
+    "Indexell",
+    "viktorjo11110",
+    "WhitelistedPerson6"
+}
+
+if not table.find(WhitelistedTesters,game.Players.LocalPlayer.Name) then
+        game.Players.LocalPlayer:Kick("Not whitelisted, Please try again.")
+        return
+end
+
+if game.PlaceId == 6516141723 then  --- Lobby
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LolSeek/sebpaint/refs/heads/main/inlobby"))()
+elseif game.PlaceId == 6839171747 then --- In Game
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LolSeek/sebpaint/refs/heads/main/ingame"))()
+end

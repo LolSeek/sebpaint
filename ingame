@@ -37,6 +37,7 @@ local Window = Rayfield:CreateWindow({
 local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
 local ItemsTab = Window:CreateTab("Custom Items", 4483362458) -- Title, Image
 local SpecialTab = Window:CreateTab("Special Functions", 4483362458) -- Title, Image
+local EntitySpawnerTab = Window:CreateTab("Entity Spawner", 4483362458) -- Title, Image
 
 local DestroyHub = SpecialTab:CreateButton({
    Name = "Destroy the hub",
@@ -45,11 +46,39 @@ local DestroyHub = SpecialTab:CreateButton({
    end,
 })
 
-local JumpToggle = Tab:CreateToggle({
+local JumpToggle = PlayerTab:CreateToggle({
    Name = "Enable Jump",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    game.Players.LocalPlayer.Character:SetAttribute("CanJump", Value)
+   end,
+})
+
+local WonderBottle = ItemsTab:CreateButton({
+   Name = "Wonder Bottle",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Agadigas/Doors/refs/heads/main/Wonder%20Bottle%20OFICIAL"))()
+   end,
+})
+
+local Resizer = ItemsTab:CreateButton({
+   Name = "Resizer",
+   Callback = function()
+   loadstring(game:HttpGet('https://gist.githubusercontent.com/IdkMyNameLoll/f0178af2301ca90c09895f10f3e7bd4b/raw/46899ccc3626f3485d85f990012f7ef37ae52e5e/resizerDoorsRemake'))()
+   end,
+})
+
+local Dozer = EntitySpawnerTab:CreateButton({
+   Name = "Dozer from Grace",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkMyNameLoll/34921473024732147312483297412/refs/heads/main/dozerspawner"))()
+   end,
+})
+
+local ViridisRift = EntitySpawnerTab:CreateButton({
+   Name = "Viridis Rift *Execute in door 0*",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Agadigas/Doors/refs/heads/main/VIRIDIS%20RIFT%20ORIGINAL"))()
    end,
 })

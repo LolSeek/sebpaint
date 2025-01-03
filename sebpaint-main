@@ -1,4 +1,4 @@
-local WhitelistedTesters = {
+local Whitelisted = {
     "GrinesMr",
     "brovisitedhisfriendz",
     "wompwompnodadnomom",
@@ -9,7 +9,7 @@ local WhitelistedTesters = {
     "Robloxwillendsoo_n"
 }
 
-if not table.find(WhitelistedTesters,game.Players.LocalPlayer.Name) then
+if not table.find(Whitelisted,game.Players.LocalPlayer.Name) then
         game.Players.LocalPlayer:Kick("Not whitelisted, Please try again.")
         return
 end

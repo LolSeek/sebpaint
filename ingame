@@ -76,7 +76,7 @@ local Dozer = EntitySpawnerTab:CreateButton({
    end,
 })
 
-local ViridisRift = EntitySpawnerTab:CreateButton({
+local ViridisRift = SpecialTab:CreateButton({
    Name = "Viridis Rift *Execute in door 0*",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Agadigas/Doors/refs/heads/main/VIRIDIS%20RIFT%20ORIGINAL"))()

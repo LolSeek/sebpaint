@@ -6,7 +6,8 @@ local Whitelisted = {
     "viktorjo11110",
     "xFaResKniGhTx",
     "Bob_RB9",
-    "Robloxwillendsoo_n"
+    "Robloxwillendsoo_n",
+    "super_abobussik56"
 }
 
 if not table.find(Whitelisted,game.Players.LocalPlayer.Name) then
